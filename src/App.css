@@ -1,5 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #282c34;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
 }
 
 .stack-item {
@@ -8,4 +13,49 @@ body {
   background-color: lightgreen;
   display: grid;
   place-items: center;
+}
+
+.mainContainer {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.aside {
+  width: 100%;
+  background-color: rgb(200, 200, 200);
+}
+
+
+.main {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.sections {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgb(235 235 235);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.section {
+  background-color: rgb(200, 200, 200);
+  display: grid;
+  place-items: center;
+  flex: 1;
+}
+
+.section:not(:last-of-type) {
+  margin-bottom: 8px;
 }
