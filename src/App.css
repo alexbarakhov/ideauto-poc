@@ -55,9 +55,10 @@ body {
 
 .section {
   background-color: var(--grey-light);
-  display: grid;
-  place-items: center;
   flex: 1;
+  padding: var(--spacing);
+  max-height: 33%;
+  overflow: auto;
 }
 
 .section:not(:last-of-type) {

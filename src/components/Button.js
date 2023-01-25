@@ -3,17 +3,17 @@ import { useState } from 'react';
 
 function Button({ label = "Button", backgroundColor = "buttonface", size = "md", onClick }) {
     let scale = 1
-    if (size === "sm" ) scale = 0.75
-    if (size === "lg" ) scale = 2
+    if (size === "sm") scale = 0.75
+    if (size === "lg") scale = 2
 
     const [isHover, setIsHover] = useState(false)
 
     const handleMouseEnter = () => {
-       setIsHover(true)
+        setIsHover(true)
     };
 
     const handleMouseLeave = () => {
-       setIsHover(false)
+        setIsHover(false)
     };
 
     const style = {
@@ -24,12 +24,12 @@ function Button({ label = "Button", backgroundColor = "buttonface", size = "md",
         fontSize: size === "lg" ? `20px` : `16px`,
     }
 
-    return(
+    return (
         <button
-        onClick={onClick}
-        style={style}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+            onClick={onClick}
+            style={style}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
         >
             {label}
         </button>
