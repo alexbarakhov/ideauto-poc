@@ -13,17 +13,17 @@ body {
   background-color: white;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+
 }
 
 .header {
   padding: var(--spacing);
-  background-color: var(--grey-light);
   border-bottom: 1px solid var(--grey-mid);
 }
 
 .panelsContainer {
   width: 100%;
-  height: calc(100vh - 53px);
+  height: calc(100vh - 54px);
   display: flex;
   flex-direction: row;
   overflow: hidden;
@@ -31,7 +31,6 @@ body {
 
 .aside {
   width: 100%;
-  background-color: var(--grey-light);
   padding: var(--spacing);
 }
 
@@ -46,7 +45,7 @@ body {
   width: 100%;
   min-height: 100%;
   background-color: var(--grey-mid);
-  padding: var(--spacing);
+  padding: 0px 1px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -54,19 +53,25 @@ body {
 }
 
 .section {
-  background-color: var(--grey-light);
+  background-color: white;
   flex: 1;
   padding: var(--spacing);
-  max-height: 33%;
+  max-height: 33, 333%;
   overflow: auto;
 }
 
 .section:not(:last-of-type) {
-  margin-bottom: var(--spacing);
+  margin-bottom: 1px;
 }
 
 .section--1::before {
   content: "Drop Area";
   display: block;
   margin-bottom: var(--spacing);
+}
+
+.table {
+  padding: var(--spacing);
+  flex-grow: 1;
+  overflow: auto;
 }
