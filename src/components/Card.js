@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useDrag } from "react-dnd";
 
-function Card({ id, label = "Card", backgroundColor = "white", }) {
+function Card({id, label = "Card", backgroundColor = "white", }) {
 
     const [{ isDragging }, drag] = useDrag(() => ({
         type: "card",
@@ -20,7 +20,9 @@ function Card({ id, label = "Card", backgroundColor = "white", }) {
     }
 
     return (
-        <div ref={drag} id={id} style={style} className="card">{label}</div>
+        <div ref={drag} id={id} style={style} className="card">
+            {label}
+        </div>
     )
 }
 
@@ -28,6 +30,7 @@ Card.propTypes = {
     id: PropTypes.number,
     label: PropTypes.string,
     backgroundColor: PropTypes.string,
+
 }
 
 export default Card
