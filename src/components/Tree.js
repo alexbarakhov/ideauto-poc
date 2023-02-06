@@ -1,6 +1,5 @@
 import TreeView from '@mui/lab/TreeView'
 import TreeItem from '@mui/lab/TreeItem'
-import Card from './Card'
 
 function Tree() {
   return (
