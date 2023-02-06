@@ -13,7 +13,6 @@ body {
   background-color: white;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-
 }
 
 .header {
@@ -65,7 +64,7 @@ body {
 }
 
 .section--1::before {
-  content: "Drop Area";
+  content: 'Drop Area';
   display: block;
   margin-bottom: var(--spacing);
 }
@@ -79,4 +78,22 @@ body {
   padding: var(--spacing);
   flex-grow: 1;
   overflow: auto;
+}
+
+.card {
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+  position: relative;
+  cursor: grab;
+}
+
+.card-title {
+  font-weight: 600;
+  margin: var(--spacing) 0;
+}
+
+.card-close {
+  position: absolute;
+  top: var(--spacing);
+  right: var(--spacing);
 }
