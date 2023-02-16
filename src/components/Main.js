@@ -14,32 +14,32 @@ function Main() {
   const [taskList, setTaskList] = useState([
     {
       _id: 1,
-      status: 'wip',
-      category: 'rosita',
-      title: 'Title 1',
+      status: 'disponible',
+      category: 'rojo',
+      title: 'Soy arrastrable 1',
       bgColor: 'pink',
     },
     {
       _id: 2,
-      status: 'wip',
-      category: 'verdito',
-      title: 'Title 2',
+      status: 'disponible',
+      category: 'verde',
+      title: 'Soy arrastrable 2',
       bgColor: 'lightgreen',
     },
     {
       _id: 3,
-      status: 'wip',
-      category: 'azulito',
-      title: 'Title 3',
+      status: 'disponible',
+      category: 'azul',
+      title: 'Soy arrastrable 3',
       bgColor: 'lightblue',
     },
   ])
 
   const handleStatus = _id => {
     const task = taskList.filter(task => task._id === _id)
-    task[0].status === 'wip'
-      ? (task[0].status = 'done')
-      : (task[0].status = 'wip')
+    task[0].status === 'disponible'
+      ? (task[0].status = 'enuso')
+      : (task[0].status = 'disponible')
 
     setTaskList(taskList.filter(task => task._id !== _id).concat(task[0]))
   }
@@ -54,7 +54,7 @@ function Main() {
           <aside className='aside'>
             <BoxTarget>
               {taskList
-                .filter((task, i) => task.status === 'wip')
+                .filter((task, i) => task.status === 'disponible')
                 .map((task, i) => (
                   <Card
                     key={task._id}
@@ -78,7 +78,7 @@ function Main() {
               <section className='section section--1'>
                 <BoxTarget>
                   {taskList
-                    .filter((task, i) => task.status === 'done')
+                    .filter((task, i) => task.status === 'enuso')
                     .map((task, i) => (
                       <Card
                         key={task._id}

@@ -37,7 +37,7 @@ function Card(props) {
         {props.title} - {props.category}
       </p>
 
-      {props.status !== 'wip' && (
+      {props.status !== 'disponible' && (
         <div className='card-close'>
           <Button label='🗑️' onClick={handleClick} />
         </div>
