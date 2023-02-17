@@ -44,7 +44,7 @@ function PieChart(props) {
 
     series.slices.template.setAll({
       stroke: am5.color(0xffffff),
-      strokeWidth: 4,
+      strokeWidth: 5,
     })
 
     series.states.create('hidden', {
