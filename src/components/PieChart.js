@@ -30,55 +30,67 @@ function PieChart(props) {
 
     var chart = root.container.children.push(
       am5percent.PieChart.new(root, {
-        endAngle: 270,
+        layout: root.verticalLayout,
       }),
     )
 
+    // Define data
+    var data = [
+      {
+        country: 'France',
+        sales: 100000,
+      },
+      {
+        country: 'Spain',
+        sales: 160000,
+      },
+      {
+        country: 'United Kingdom',
+        sales: 80000,
+      },
+      {
+        country: 'Netherlands',
+        sales: 90000,
+      },
+      {
+        country: 'Portugal',
+        sales: 25000,
+      },
+      {
+        country: 'Germany',
+        sales: 70000,
+      },
+    ]
+
+    // Create series
     var series = chart.series.push(
       am5percent.PieSeries.new(root, {
-        valueField: 'value',
-        categoryField: 'category',
-        endAngle: 270,
+        name: 'Series',
+        valueField: 'sales',
+        categoryField: 'country',
       }),
     )
-
     series.slices.template.setAll({
       stroke: am5.color(0xffffff),
       strokeWidth: 5,
     })
-
-    series.states.create('hidden', {
-      endAngle: -90,
-    })
-
-    let data = [
-      {
-        category: 'Lithuania',
-        value: 401.9,
-      },
-      {
-        category: 'Czechia',
-        value: 301.9,
-      },
-      {
-        category: 'Ireland',
-        value: 201.1,
-      },
-      {
-        category: 'Germany',
-        value: 165.8,
-      },
-      {
-        category: 'Australia',
-        value: 139.9,
-      },
-      {
-        category: 'Austria',
-        value: 128.3,
-      },
-    ]
-
     series.data.setAll(data)
+    series.labels.template.set('forceHidden', true)
+    series.ticks.template.set('forceHidden', true)
+
+    // Add legend
+    var legend = chart.children.push(
+      am5.Legend.new(root, {
+        centerX: am5.percent(50),
+        x: am5.percent(50),
+        layout: am5.GridLayout.new(root, {
+          maxColumns: 3,
+          fixedWidthGrid: true,
+        }),
+      }),
+    )
+
+    legend.data.setAll(series.dataItems)
 
     series.appear(1000, 100)
   }, [chartID])
