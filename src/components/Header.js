@@ -1,4 +1,3 @@
-import Button from './Button'
 import Stack from './Stack'
 import Box from '@mui/material/Box'
 import InputLabel from '@mui/material/InputLabel'
@@ -11,6 +10,7 @@ import AnimIconFolder from './icons/AnimIconFolder'
 import AnimIconDisk from './icons/AnimIconDisk'
 import AnimIconShare from './icons/AnimIconShare'
 import AnimIconSave from './icons/AnimIconSave'
+import { Button, Tooltip } from '@mui/material'
 
 function Header() {
   const [cubos, setCubos] = useState('')
@@ -42,17 +42,81 @@ function Header() {
             </Select>
           </FormControl>
         </Box>
-        <Button label='Button' />
-        <Button
-          label='Button 2'
-          backgroundColor='lightgreen'
-          onClick={handleClick}
-        />
-        <AnimIconArrow width='56' height='56' />
-        <AnimIconFolder width='56' height='56' />
-        <AnimIconDisk width='56' height='56' />
-        <AnimIconShare width='56' height='56' />
-        <AnimIconSave width='56' height='56' />
+
+        <Tooltip
+          title='Carpetica'
+          componentsProps={{
+            tooltip: {
+              sx: {
+                bgcolor: '#003057',
+              },
+            },
+          }}
+        >
+          <Button sx={{ '&:hover': { backgroundColor: 'transparent' } }}>
+            <AnimIconFolder width='56' height='56' />
+          </Button>
+        </Tooltip>
+
+        <Tooltip
+          title='Volver'
+          componentsProps={{
+            tooltip: {
+              sx: {
+                bgcolor: '#003057',
+              },
+            },
+          }}
+        >
+          <Button sx={{ '&:hover': { backgroundColor: 'transparent' } }}>
+            <AnimIconArrow width='56' height='56' />
+          </Button>
+        </Tooltip>
+
+        <Tooltip
+          title='Guardar'
+          componentsProps={{
+            tooltip: {
+              sx: {
+                bgcolor: '#003057',
+              },
+            },
+          }}
+        >
+          <Button sx={{ '&:hover': { backgroundColor: 'transparent' } }}>
+            <AnimIconDisk width='56' height='56' />
+          </Button>
+        </Tooltip>
+
+        <Tooltip
+          title='Descargar'
+          componentsProps={{
+            tooltip: {
+              sx: {
+                bgcolor: '#003057',
+              },
+            },
+          }}
+        >
+          <Button sx={{ '&:hover': { backgroundColor: 'transparent' } }}>
+            <AnimIconSave width='56' height='56' />
+          </Button>
+        </Tooltip>
+
+        <Tooltip
+          title='Descargar'
+          componentsProps={{
+            tooltip: {
+              sx: {
+                bgcolor: '#003057',
+              },
+            },
+          }}
+        >
+          <Button sx={{ '&:hover': { backgroundColor: 'transparent' } }}>
+            <AnimIconShare width='56' height='56' />
+          </Button>
+        </Tooltip>
       </Stack>
     </header>
   )
