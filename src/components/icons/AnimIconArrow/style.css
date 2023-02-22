@@ -1,0 +1,21 @@
+.AnimIconArrow .AnimIconArrow-line {
+  stroke-dasharray: 30.6;
+  stroke-dashoffset: 59.6;
+  transition: all ease 0.33s;
+}
+.AnimIconArrow:hover .AnimIconArrow-line {
+  stroke-dashoffset: 62.6;
+}
+
+.AnimIconArrow .AnimIconArrow-caret,
+.AnimIconArrow .AnimIconArrow-dots {
+  transition: all ease 0.33s;
+}
+
+.AnimIconArrow:hover .AnimIconArrow-caret {
+  transform: translateX(-6%);
+}
+
+.AnimIconArrow:hover .AnimIconArrow-dots {
+  transform: translateX(6%);
+}

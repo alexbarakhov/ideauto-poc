@@ -1,0 +1,7 @@
+.AnimIconSave .AnimIconSave-arrow {
+  transition: all ease 0.33s;
+}
+
+.AnimIconSave:hover .AnimIconSave-arrow {
+  transform: translateY(8%);
+}

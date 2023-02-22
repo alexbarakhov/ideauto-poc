@@ -1,0 +1,8 @@
+.AnimIconFolder .AnimIconFolder-side {
+  transition: all ease 0.33s;
+  transform-origin: 32px 26px;
+}
+
+.AnimIconFolder:hover .AnimIconFolder-side {
+  transform: skew(17.5deg, 0deg);
+}

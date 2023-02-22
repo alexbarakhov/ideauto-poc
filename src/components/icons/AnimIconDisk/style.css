@@ -1,0 +1,8 @@
+.AnimIconDisk .AnimIconDisk-inner {
+  transition: all ease 0.33s;
+  transform-origin: 16px 16px;
+}
+
+.AnimIconDisk:hover .AnimIconDisk-inner {
+  transform: rotate(-11deg);
+}

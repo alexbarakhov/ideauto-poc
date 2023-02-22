@@ -1,0 +1,7 @@
+.AnimIconShare .AnimIconShare-arrow {
+  transition: all ease 0.33s;
+}
+
+.AnimIconShare:hover .AnimIconShare-arrow {
+  transform: translateX(6%);
+}
