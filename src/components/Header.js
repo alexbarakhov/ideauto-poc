@@ -19,10 +19,6 @@ function Header() {
     setCubos(event.target.value)
   }
 
-  function handleClick() {
-    console.log('dale don dale')
-  }
-
   return (
     <header className='header'>
       <Stack wrap>
